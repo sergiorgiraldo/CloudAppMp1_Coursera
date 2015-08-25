@@ -35,7 +35,7 @@ public class MP1 {
     }
 
     Integer[] getIndexes() throws NoSuchAlgorithmException {
-        Integer n = 10000;
+        Integer n = 10000; 
         Integer number_of_lines = 50000;
         Integer[] ret = new Integer[n];
         this.initialRandomGenerator(this.userName);
@@ -104,8 +104,7 @@ public class MP1 {
         return ret;
     }
 
-    public static TreeMap<String, Integer> SortByValue 
-			(SortedMap<String, Integer> map) {
+    public TreeMap<String, Integer> SortByValue(SortedMap<String, Integer> map) {
 		ValueComparator vc =  new ValueComparator(map);
 		TreeMap<String,Integer> sortedMap = new TreeMap<String,Integer>(vc);
 		sortedMap.putAll(map);
@@ -137,7 +136,7 @@ class ValueComparator implements Comparator<String> {
     }
  
     public int compare(String a, String b) {
-        if (map.get(a) >= map.get(b)) {
+        if (map.get(a) > map.get(b)) {
             return -1;
         } else {
             return 1;
